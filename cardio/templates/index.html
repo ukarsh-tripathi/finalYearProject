@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Cardiovascular Disease Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Cardiovascular Disease Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="id" placeholder="ID number eg.0-1000"><br>
+                <input class="form-input" type="text" name="age" placeholder="eg. 44"><br>
+                <input class="form-input" type="text" name="gender" placeholder="eg. male='1' or female='2'"><br>
+                <input class="form-input" type="text" name="height" placeholder="Height in cm eg. 160"><br>
+                <input class="form-input" type="text" name="weight" placeholder="Weight in kg eg. 89"><br>
+                <input class="form-input" type="text" name="ap-hi" placeholder="Systolic blood pressure eg. 140"><br>
+                <input class="form-input" type="text" name="ap-lo" placeholder="Diastolic blood pressure eg. 80"><br>
+                <input class="form-input" type="text" name="cholesterol" placeholder="1: normal, 2: above normal, 3: well above normal"><br>
+                <input class="form-input" type="text" name="gluc" placeholder="1: normal, 2: above normal, 3: well above normal"><br>
+                <input class="form-input" type="text" name="smoke" placeholder="Patient smokes or not eg.1=Yes;0=No"><br>
+                <input class="form-input" type="text" name="alco" placeholder="Alchoholic eg. 1=Yes;0=No"><br>
+                <input class="form-input" type="text" name="active" placeholder="Daily Activity eg. 1=Yes;0=No"><br>
+
+
+
+
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/utkarsh-tripathi-18a5ab197/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by UPOYU.</p>
+       </div>
+
+    </body>
+</html>
